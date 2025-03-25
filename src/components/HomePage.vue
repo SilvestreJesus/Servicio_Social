@@ -27,25 +27,84 @@
           </option>
         </select>
       </div>
-
+      
       <div class="temp-container">
-      <div class="row-container">
-        <div class="title">Temporary:</div>
+        <div class="row-container">
+          <div class="title">Temporary:</div>
+        </div>
+        <input
+          type="range"
+          class="form-control-range"
+          id="temp"
+          min="2004"
+          max="2022"
+          v-model="selectedYear"
+          @input="updateRangeValue"
+        />
+        <div class="mt-2" style="font-size: 20px; margin-left: 10%; margin-top: 10px;" >
+          <span>Selected Year: <span id="rangeValue">{{ selectedYear }}</span></span>
+        </div>
       </div>
-      <input
-        type="range"
-        class="form-control-range"
-        id="temp"
-        min="2004"
-        max="2022"
-        v-model="selectedYear"
-        @input="updateRangeValue"
-      />
-      <div class="mt-2">
-        <span>Selected Year: <span id="rangeValue">{{ selectedYear }}</span></span>
-      </div>
-    </div>
 
+      <div class="colum-left">
+        <div class="col-md-3">
+          <label for="w1" class="form-label">Vol</label>
+          <input 
+            type="number" 
+            class="form-control pesos" 
+            id="w1" 
+            name="w1_vol" 
+            step="0.01"
+            min="0" 
+            max="1" 
+            v-model="indicator.vol"  
+            value="0.25"
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="w2" class="form-label">IARC</label>
+          <input 
+            type="number" 
+            class="form-control pesos" 
+            id="w2" 
+            name="w2_IARC" 
+            step="0.01"
+            min="0" 
+            max="1" 
+            v-model="indicator.iarc"  
+            value="0.25"
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="w3" class="form-label">Dof</label>
+          <input 
+            type="number" 
+            class="form-control pesos" 
+            id="w3" 
+            name="w1_dof" 
+            step="0.01"
+            min="0" 
+            max="1" 
+            v-model="indicator.dof" 
+            value="0.25"
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="w4" class="form-label">Prox</label>
+          <input 
+            type="number" 
+            class="form-control pesos" 
+            id="w4" 
+            name="w1_prox" 
+            step="0.01"
+            min="0" 
+            max="1" 
+            v-model="indicator.prox"
+            value="0.25"
+          />
+        </div>
+      </div>
+      
       <form id="sustanciasForm" class="form-container">
         <div class="columns">
           <div class="column">
@@ -111,10 +170,18 @@
                  to calculate the risk per year and state in the Mexican Republic.`,
         
         Space: "Space:",
+        selectedYear: 2013,
+        indicator: {
+          vol: 0.25,
+          iarc: 0.25,
+          dof: 0.25,
+          prox: 0.25
+        },
         weights: "weights associated with risk calculation",
         sustancias: [],
         estados: [],
-        selectedSpace: null
+        selectedSpace: null,
+        
       };
     },
     computed: {

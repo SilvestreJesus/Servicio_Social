@@ -115,7 +115,6 @@ margin-top: 40px;
   border-radius: 7px;
   font-weight: bold;
   font-size: 18px;
-  
   outline: none;
   margin-left: 10%;
   margin-top: 0px;
@@ -140,7 +139,7 @@ margin-top: 40px;
   display: flex;
   justify-content: flex-end; 
   width:54%;
-  margin: -180px 54%;
+  margin: -280px 54%;
 
 }
 
@@ -181,4 +180,16 @@ input[type="range"] {
   text-align: center;
 }
 
+.colum-left {
+  display: flex;
+  justify-content: space-between;  
+  width: 42%;
+  margin-left: 55px;
+}
 
+
+.form-control.pesos {
+  width: 140%;
+  padding: 8px;
+  border: 3px solid #030303;
+}
