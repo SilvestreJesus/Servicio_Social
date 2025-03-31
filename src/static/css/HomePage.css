@@ -6,15 +6,16 @@
   scroll-behavior: smooth;
 }
 
+
 header {
   background-color: #7695D7;
   width: 99%;
   margin: 6px;
   color: #242424;
   justify-content: space-between;
-  padding: 20px ;
-  border-radius: 5px; 
-  text-align: center; 
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
 }
 
 body {
@@ -22,16 +23,15 @@ body {
 }
 
 #content {
-height: 30vh;
+  height: 30vh;
 }
 
 .text {
-  text-align: justify; 
+  text-align: justify;
   font-size: 20px;
   margin-left: 50px;
-  width: 92%; 
+  width: 92%;
   margin-top: 80px;
-  
 }
 
 img {
@@ -44,102 +44,79 @@ margin-top: 40px;
 
 .formula1 {
   font-size: 24px; 
-  margin-left: 26%; 
+  margin-left: 30%; 
 }
 
 .formula2 {
   font-size: 18px;
   margin-top: 50px;
-  margin-left: 10%; 
+  margin-left: 14%; 
   margin-bottom: 80px;
 }
 
 .fondo {
-  display:flex;
+  display: flex;
   flex-direction: column;
-   
   background-color: #7695D7;
   width: 99%;
   margin: 6px;
   height:100ch;
   border-radius: 5px;
+  padding: 20px;
 }
 
-.row-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
-  width: 90%;
-}
 
 .title{
   font-size: 22px;
   font-weight: bold;
   margin: 30px auto;
-  margin-right: 80%;  
+  margin-right: 49%;
 }
 
-.title-left {
+.title-left{
   font-size: 22px;
   font-weight: bold;
-  margin: 30px auto;
-  margin-left: 50px;
-}
-
-.title-right {
-  font-size: 22px;
-  font-weight: bold;
-  margin-right: 50px;  
-  white-space: pre-line;  
-}
-
-.title-center {
-  font-size: 22px;
-  font-weight: bold;
-  margin: 30px auto;
-  margin-right: 48%;
-}
-
-.row-right {
-  display: flex;
-  justify-content: space-between;
-  width: 46%; 
-  margin-left: 52%; 
-  margin-top: -30px;
+  margin-left: 62%;
 }
 
 .form-control-left {
-  width: 30%;
+  width: 176%;
   padding: 8px;
   border: 3px solid #030303;
   border-radius: 7px;
   font-weight: bold;
   font-size: 18px;
   outline: none;
-  margin-left: 10%;
-  margin-top: 0px;
-  
 }
 
-
-.form-control-rigth{
-  width: 250%;
-  padding: 10px;
-  border: 2px solid #000000;
-  border-radius: 7px;
-  background: rgb(255, 255, 255);
-  color: #000000;
-  outline: none;
-  margin-left: 50px;
-  font-size: 14px;
+.row-space-temp {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 90px;
+  width: 90%;
+  margin-top: -50px;
 }
+
+.space-container {
+  margin-left: 2%;
+}
+
+.temp-container {
+  margin-right: 54%; 
+}
+
+.range-text {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
 
 .columns {
   
   display: flex;
   justify-content: flex-end; 
   width:54%;
-  margin: -280px 54%;
+  margin: -810px 57%;
 
 }
 
@@ -156,7 +133,7 @@ margin-top: 40px;
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
-  margin-top: 12px;
+  margin-top: 20px;
 }
 
 .form-control {
@@ -169,9 +146,8 @@ margin-top: 40px;
 }
 
 input[type="range"] {
-  width: 32%;
+  width: 200%;
   accent-color: #000000;
-  margin-left: 9%;
 }
 
 .col-12 {
@@ -183,13 +159,44 @@ input[type="range"] {
 .colum-left {
   display: flex;
   justify-content: space-between;  
-  width: 42%;
-  margin-left: 55px;
+  width: 49%;
+  margin-left: 24px;
 }
 
-
 .form-control.pesos {
-  width: 140%;
+  width: 146%;
   padding: 8px;
   border: 3px solid #030303;
+}
+
+.risk {
+  width: 700px;
+  height: 620px;  
+  padding: 20px;
+  border: 3px solid #000000;
+  background: rgb(255, 255, 255);
+  text-align: center;  /* Centra el texto */
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+#riskValue {
+  text-align: center; 
+}
+
+.run {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 35px solid #0a3d1c;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+  align-self: flex-start;
+  margin-left: 20px;
 }
